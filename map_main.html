@@ -1,14 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="min-width=1920;width=device-width">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Maps | range.gg</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="style/map_style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div id="topbar">
+        <div id="dropdowncontainer">
+          <div id="dropdownlabel">SELECTED MAP:</div>
 
-</head>
-<body>
-    
-</body>
+          <button id="dropdown">ASCENT</button>
+          <div class="dropdown-content">
+            <button onclick="Ascent()">ASCENT</button>
+            <button onclick="Bind()">BIND</button>
+            <button onclick="Breeze()">BREEZE</button>
+            <button onclick="Fracture()">FRACTURE</button>
+            <button onclick="Haven()">HAVEN</button>
+            <button onclick="Icebox()">ICEBOX</button>
+            <button onclick="Lotus()">LOTUS</button>
+            <button onclick="Pearl()">PEARL</button>
+            <button onclick="Split()">SPLIT</button>
+            <button onclick="Sunset()">SUNSET</button>
+          </div>
+        </div>
 
+        <a id="logo" href="homepage.html">RANGE.GG</a>
+      </div>
+
+      <div id="head">
+        <div id="mapcover">
+          <img
+            src="https://static.wikia.nocookie.net/valorant/images/e/e7/Loading_Screen_Ascent.png"
+            alt=""
+            height="300px"
+          />
+        </div>
+        <div id="headgradient"></div>
+        <div id="mapname">ASCENT</div>
+        <div id="location">Venice, Italy</div>
+        <div id="coordinates">45°25'51.1"N 12°20'05.3"E</div>
+      </div>
+
+      <section id="body">
+        <div id="gallerycontainer">
+          <div id="gallery">
+            <li></li>
+            <li
+              style="
+                background: url(/assets/maps/Ascent_A_Site.webp);
+                background-size: contain;
+                background-repeat: no-repeat;
+              "
+            ></li>
+            <li
+              style="
+                background: url(/assets/maps/Ascent_B_Site.webp);
+                background-size: contain;
+                background-repeat: no-repeat;
+              "
+            ></li>
+            <li
+              style="
+                background: url(/assets/maps/Ascent_Attacker_Spawn.webp);
+                background-size: contain;
+                background-repeat: no-repeat;
+              "
+            ></li>
+            <li
+              style="
+                background: url(/assets/maps/Ascent_Defender_Spawn.webp);
+                background-size: contain;
+                background-repeat: no-repeat;
+              "
+            ></li>
+            <li
+              style="
+                background: url(/assets/maps/Ascent_Courtyard.webp);
+                background-size: contain;
+                background-repeat: no-repeat;
+              "
+            ></li>
+          </div>
+          <div id="galleryfade"></div>
+          <div class="Border"></div>
+        </div>
+
+        <div id="layoutcontainer">
+          <div id="minimap" class="Border">
+            <img
+              src="https://blitz-cdn-plain.blitz.gg/blitz/val/maps/ascent/images/ascent-layout-base.svg"
+              alt=""
+              height="550px"
+              class="MapLayout"
+            />
+            <img
+              src="https://blitz-cdn-plain.blitz.gg/blitz/val/maps/ascent/images/ascent-labels-offense.svg"
+              alt=""
+              height="550px"
+              class="MapLayout"
+            />
+            <img
+              src="https://blitz-cdn-plain.blitz.gg/blitz/val/maps/ascent/images/ascent-walls-offense.svg"
+              alt=""
+              height="550px"
+              class="MapLayout"
+            />
+          </div>
+        </div>
+        <div id="vertdiv"></div>
+      </section>
+    </main>
+  </body>
 </html>
+
+<script>
+  function Ascent() {
+    $("#gallery").load("mapinfo.html #ascgallery li");
+    $("#minimap").load("mapinfo.html #ascmap");
+    $("#mapname").html("ASCENT");
+    $("#dropdown").html("ASCENT");
+    $("#location").html("Venice, Italy");
+    $("#coordinates").html("45°25'51.1\"N 12°20'05.3\"E");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/e/e7/Loading_Screen_Ascent.png" alt="" height="300px"/>'
+    );
+  }
+
+  function Bind() {
+    $("#gallery").load("mapinfo.html #bindgallery li");
+    $("#minimap").load("mapinfo.html #bindmap");
+    $("#mapname").html("BIND");
+    $("#dropdown").html("BIND");
+    $("#location").html("Rabat, Morocco");
+    $("#coordinates").html("34°2'0\" N 6°51'0\" W");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/2/23/Loading_Screen_Bind.png" alt="" height="300px"/>'
+    );
+  }
+
+  function Breeze() {
+    $("#gallery").load("mapinfo.html #breezegallery li");
+    $("#minimap").load("mapinfo.html #breezemap");
+    $("#mapname").html("BREEZE");
+    $("#dropdown").html("BREEZE");
+    $("#location").html("Bermuda Triangle, Atlantic Ocean");
+    $("#coordinates").html("26°11'06\" N 71°10'31\" W");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/1/10/Loading_Screen_Breeze.png" alt="" height="300px"/>'
+    );
+  }
+
+  function Fracture() {
+    $("#gallery").load("mapinfo.html #fracturegallery li");
+    $("#minimap").load("mapinfo.html #fracturemap");
+    $("#mapname").html("FRACTURE");
+    $("#dropdown").html("FRACTURE");
+    $("#location").html("Santa Fe County, New Mexico, USA");
+    $("#coordinates").html("35°48'18\" N 106°08'19\" W");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/f/fc/Loading_Screen_Fracture.png" alt="" height="300px"/>'
+    );
+  }
+
+  function Haven() {
+    $("#gallery").load("mapinfo.html #havengallery li");
+    $("#minimap").load("mapinfo.html #havenmap");
+    $("#dropdown").html("HAVEN");
+    $("#mapname").html("HAVEN");
+    $("#location").html("Thimphu, Thimphu District, Bhutan");
+    $("#coordinates").html("27°28'0\" N 89°38'30\" E");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/7/70/Loading_Screen_Haven.png" alt="" height="300px"/>'
+    );
+  }
+
+  function Icebox() {
+    $("#gallery").load("mapinfo.html #icegallery li");
+    $("#minimap").load("mapinfo.html #icemap");
+    $("#mapname").html("ICEBOX");
+    $("#dropdown").html("ICEBOX");
+    $("#location").html(
+      "Bennett Island, Sakha, Far Eastern Federal District, Russia"
+    );
+    $("#coordinates").html("76°44'0\" N 149°30'0\" E");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/1/13/Loading_Screen_Icebox.png" alt="" height="300px"/>'
+    );
+  }
+
+  function Lotus() {
+    $("#gallery").load("mapinfo.html #lotusgallery li");
+    $("#minimap").load("mapinfo.html #lotusmap");
+    $("#mapname").html("LOTUS");
+    $("#dropdown").html("LOTUS");
+    $("#location").html("Western Ghats, Karnataka, India");
+    $("#coordinates").html("14°07'03\"N 74°53'21\"E");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/d/d0/Loading_Screen_Lotus.png" alt="" height="300px"/>'
+    );
+  }
+
+  function Pearl() {
+    $("#gallery").load("mapinfo.html #pearlgallery li");
+    $("#minimap").load("mapinfo.html #pearlmap");
+    $("#mapname").html("PEARL");
+    $("#dropdown").html("PEARL");
+    $("#location").html("Lisbon, Lisbon District, Portugal");
+    $("#coordinates").html("38°42'43\"N 9°08'27\"W");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/a/af/Loading_Screen_Pearl.png" alt="" height="300px"/>'
+    );
+  }
+
+  function Split() {
+    $("#gallery").load("mapinfo.html #splitgallery li");
+    $("#minimap").load("mapinfo.html #splitmap");
+    $("#mapname").html("SPLIT");
+    $("#dropdown").html("SPLIT");
+    $("#location").html("Shinjuku, Tokyo, Kanto, Japan");
+    $("#coordinates").html("35°41'23\" N 139°41'32\" E");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/d/d6/Loading_Screen_Split.png" alt="" height="300px"/>'
+    );
+  }
+
+  function Sunset() {
+    $("#gallery").load("mapinfo.html #sungallery li");
+    $("#minimap").load("mapinfo.html #sunmap");
+    $("#mapname").html("SUNSET");
+    $("#dropdown").html("SUNSET");
+    $("#location").html(
+      "Boyle Heights, Los Angeles, California, USA, Alpha Earth"
+    );
+    $("#coordinates").html("34°2'2\" N 118°12'16\" W");
+    $("#mapcover").html(
+      '<img src="https://static.wikia.nocookie.net/valorant/images/5/5c/Loading_Screen_Sunset.png/" alt="" height="300px"/>'
+    );
+  }
+
+  const slider = document.querySelector("#gallery");
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slider.classList.add("active");
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider.addEventListener("mouseleave", (_) => {
+    isDown = false;
+    slider.classList.remove("active");
+  });
+  slider.addEventListener("mouseup", (_) => {
+    isDown = false;
+    slider.classList.remove("active");
+  });
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const SCROLL_SPEED = 3;
+    const walk = (x - startX) * SCROLL_SPEED;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+</script>
