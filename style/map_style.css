@@ -15,7 +15,11 @@ body {
   font-family: "SCB";
   src: url("/assets/fonts/ScoutCond-Bold.otf") format("opentype");
   font-weight: Bold;
-  font-style: Italic;
+}
+
+@font-face {
+  font-family: "SCR";
+  src: url("/assets/fonts/ScoutCond-Regular.otf") format("opentype");
 }
 
 @font-face {
@@ -245,8 +249,13 @@ body {
   right: 60px;
   font-family: SCB;
   text-decoration: none !important;
-  color: white;
+  color: rgb(232, 232, 232);
   font-size: 50px;
+}
+#logo:hover {
+    
+  color: rgb(255, 255, 255);
+  transition: 0.2s;
 }
 
 #dropdowncontainer {
@@ -318,6 +327,7 @@ input[type="reset"] {
   font-size: 40px;
   border-radius: 0px 0px 12px 12px;
   button {
+    color: rgb(236, 232, 225);
     margin-left: 5px;
     text-indent: 30px;
     height: 50px;
@@ -327,6 +337,7 @@ input[type="reset"] {
     background-color: rgb(15, 25, 35);
   }
   button:hover {
+    color: rgb(255, 255, 255);
     transition: 0.2s;
     background-color: #1d2b38;
   }
@@ -340,4 +351,57 @@ input[type="reset"] {
 #dropdown:hover + .dropdown-content {
   top: 55px;
   left: 260px;
+}
+
+#agnt {
+  position: absolute;
+  right: 300px;
+  top: 0px;
+  height: 57px;
+  width: 200px;
+  font-family: SCR;
+  text-decoration: none !important;
+  color: rgb(232, 232, 232);
+  font-size: 40px;
+  text-align: center;
+  align-content: center;
+  background: linear-gradient(
+      to top,
+      rgb(255, 70, 85, 1) 2px,
+      transparent 2px
+    )
+    0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+}
+#agnt:hover {
+    background-size: 100% 2px;
+    transition: 0.3s;
+    font-size: 41px;
+}
+#wpn {
+  position: absolute;
+  right: 515px;
+  top: 0px;
+  height: 57px;
+  width: 200px;
+  font-family: SCR;
+  text-decoration: none !important;
+  color: rgb(232, 232, 232);
+  font-size: 40px;
+  text-align: center;
+  align-content: center;
+  background: linear-gradient(
+      to top,
+      rgb(255, 70, 85, 1) 2px,
+      transparent 2px
+    )
+    0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+}
+#wpn:hover {
+    background-size: 100% 2px;
+    transition: 0.3s;
+    font-size: 41px;
 }
