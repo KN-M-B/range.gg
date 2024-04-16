@@ -76,7 +76,7 @@
 }
 
 .container .tag_line .garena_logo img{
-  width: 120px;
+  width: 250px;
 }
 
 .container .tag_line .garena_logo p{
@@ -95,14 +95,15 @@
 
 .container .tag_line h1{
   color: #ffcc00;
+  font-size: 60px;
   text-shadow: 3px 0 20px black;
 }
 
 .about{
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   padding-top: 50px;
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  background-image: linear-gradient(rgb(14, 45, 75), rgb(95, 92, 92), rgb(8, 8, 54));
   background-position: center;
   background-size: cover;
 }
@@ -121,8 +122,10 @@
 }
 
 .about .main img{
-  width: 550px;
+  width: 600px;
+  height: 800px;
   cursor: pointer;
+  margin-left: 200px;
 }
 
 .about .main .about_text{
