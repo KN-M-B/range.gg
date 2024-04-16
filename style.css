@@ -1,4 +1,4 @@
-*,
+/* *,
 *::before,
 *::after {
   padding: 0;
@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
   height: -webkit-fill-available;
 }
-
+*/
 body {
 	font-family: "Rubik", sans-serif;
 	font-size: clamp(1rem, 2vw, 1.125rem);
@@ -26,12 +26,11 @@ body {
 	line-height: 1.5;
 	height: -webkit-fill-available;
 	color: hsl(206, 5%, 100%);
-	background-color: hsl(216, 22%, 4%);
-	background-image: url(Valorantlogo.avif);
-	background-size: contain;
+	background-image: url('background.png') ;
+  background-size: contain;
 	background-position: top center;
 }
-
+/*
 a,
 button {
   cursor: pointer;
@@ -378,4 +377,4 @@ video {
 	.brandlogo img {
 		width: 150px;
 	}
-}
+} */
