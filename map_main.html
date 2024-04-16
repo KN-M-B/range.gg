@@ -6,6 +6,7 @@
     <title>Maps | range.gg</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link href="style/map_style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom/dist/panzoom.min.js"></script>
   </head>
   <body>
     <main>
@@ -95,7 +96,7 @@
             <img
               src="https://blitz-cdn-plain.blitz.gg/blitz/val/maps/ascent/images/ascent-layout-base.svg"
               alt=""
-              height="550px"
+              height="  50px"
               class="MapLayout"
             />
             <img
@@ -114,11 +115,68 @@
         </div>
         <div id="vertdiv"></div>
       </section>
+
+      <div
+        style="
+          position: absolute;
+          width: 100%;
+          height: 100px;
+          background-color: #070c11;
+          top: 1010px;
+        "
+      ></div>
     </main>
   </body>
 </html>
 
 <script>
+  const element = document.getElementById("minimap");
+  const panzoom = Panzoom(element, {
+    canvas: true,
+    minScale: 1.0,
+    maxScale: 2,
+    animate: true,
+    step: 0.5,
+  });
+
+  const parent = element.parentElement;
+  parent.addEventListener("wheel", panzoom.zoomWithWheel);
+
+  element.addEventListener("panzoomzoom", (event) => {
+    if (panzoom.getScale() < 1.1) {
+      panzoom.reset();
+    }
+  });
+
+  element.addEventListener("panzoompan", (event) => {
+    var b = panzoom.getPan();
+    var a = panzoom.getScale();
+
+    if (a < 1.1) {
+      panzoom.reset();
+    } else if (a <= 1.5) {
+      if (b.x > 110 || b.x < -110) {
+        b.x = Math.max(-110, Math.min(b.x, 110));
+      }
+
+      if (b.y > 93 || b.y < -93) {
+        b.y = Math.max(-93, Math.min(b.y, 93));
+      }
+
+      panzoom.pan(b.x, b.y);
+    } else {
+      if (b.x > 162 || b.x < -162) {
+        b.x = Math.max(-162, Math.min(b.x, 162));
+      }
+
+      if (b.y > 137 || b.y < -137) {
+        b.y = Math.max(-137, Math.min(b.y, 137));
+      }
+
+      panzoom.pan(b.x, b.y);
+    }
+  });
+
   function Ascent() {
     $("#gallery").load("mapinfo.html #ascgallery li");
     $("#minimap").load("mapinfo.html #ascmap");
@@ -129,6 +187,8 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/e/e7/Loading_Screen_Ascent.png" alt="" height="300px"/>'
     );
+
+    panzoom.reset();
   }
 
   function Bind() {
@@ -141,6 +201,7 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/2/23/Loading_Screen_Bind.png" alt="" height="300px"/>'
     );
+    panzoom.reset();
   }
 
   function Breeze() {
@@ -153,6 +214,7 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/1/10/Loading_Screen_Breeze.png" alt="" height="300px"/>'
     );
+    panzoom.reset();
   }
 
   function Fracture() {
@@ -165,6 +227,7 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/f/fc/Loading_Screen_Fracture.png" alt="" height="300px"/>'
     );
+    panzoom.reset();
   }
 
   function Haven() {
@@ -177,6 +240,7 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/7/70/Loading_Screen_Haven.png" alt="" height="300px"/>'
     );
+    panzoom.reset();
   }
 
   function Icebox() {
@@ -191,6 +255,7 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/1/13/Loading_Screen_Icebox.png" alt="" height="300px"/>'
     );
+    panzoom.reset();
   }
 
   function Lotus() {
@@ -203,6 +268,7 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/d/d0/Loading_Screen_Lotus.png" alt="" height="300px"/>'
     );
+    panzoom.reset();
   }
 
   function Pearl() {
@@ -215,6 +281,7 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/a/af/Loading_Screen_Pearl.png" alt="" height="300px"/>'
     );
+    panzoom.reset();
   }
 
   function Split() {
@@ -227,6 +294,7 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/d/d6/Loading_Screen_Split.png" alt="" height="300px"/>'
     );
+    panzoom.reset();
   }
 
   function Sunset() {
@@ -241,6 +309,7 @@
     $("#mapcover").html(
       '<img src="https://static.wikia.nocookie.net/valorant/images/5/5c/Loading_Screen_Sunset.png/" alt="" height="300px"/>'
     );
+    panzoom.reset();
   }
 
   const slider = document.querySelector("#gallery");
