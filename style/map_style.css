@@ -40,7 +40,7 @@ body {
   height: 60px;
   width: 100%;
   background-color: #070c11;
-  position: absolute;
+  position: relative;
   top: 0px;
   left: 0px;
 }
@@ -49,8 +49,8 @@ body {
   height: 300px;
   width: 100%;
   background-color: rgb(255, 70, 85);
-  position: absolute;
-  top: 60px;
+  position: relative;
+  top: 0px;
   left: 0px;
   pointer-events: none;
 }
@@ -60,7 +60,7 @@ body {
   width: 100%;
   background-color: rgb(15, 25, 35);
   position: relative;
-  top: 360px;
+  top: 0px;
   left: 0px;
 }
 
@@ -247,13 +247,14 @@ body {
 }
 
 #logo {
-  top: -3px;
+  top: 0px;
   position: absolute;
   right: 60px;
-  font-family: SCB;
+  font-family: SCBI;
   text-decoration: none !important;
   color: rgb(232, 232, 232);
-  font-size: 50px;
+  margin-top: -7px;
+  font-size: 55px;
 }
 #logo:hover {
     
@@ -360,12 +361,13 @@ input[type="reset"] {
   position: absolute;
   right: 300px;
   top: 0px;
-  height: 57px;
+  padding-top: 6px;
+  height: 45px;
   width: 200px;
-  font-family: SCR;
+  font-family: 1451;
   text-decoration: none !important;
   color: rgb(232, 232, 232);
-  font-size: 40px;
+  font-size: 25px;
   text-align: center;
   align-content: center;
   background: linear-gradient(
@@ -380,19 +382,19 @@ input[type="reset"] {
 #agnt:hover {
     background-size: 100% 2px;
     transition: 0.3s;
-    font-size: 41px;
     color: rgb(255, 255, 255);
 }
 #wpn {
   position: absolute;
   right: 515px;
   top: 0px;
-  height: 57px;
+  padding-top: 6px;
+  height: 45px;
   width: 200px;
-  font-family: SCR;
+  font-family: 1451;
   text-decoration: none !important;
   color: rgb(232, 232, 232);
-  font-size: 40px;
+  font-size: 25px;
   text-align: center;
   align-content: center;
   background: linear-gradient(
@@ -407,7 +409,6 @@ input[type="reset"] {
 #wpn:hover {
     background-size: 100% 2px;
     transition: 0.3s;
-    font-size: 41px;
     color: rgb(255, 255, 255);
 }
 
