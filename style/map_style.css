@@ -357,6 +357,7 @@ input[type="reset"] {
   left: 260px;
 }
 
+
 #agnt {
   position: absolute;
   right: 300px;
@@ -364,7 +365,7 @@ input[type="reset"] {
   padding-top: 6px;
   height: 45px;
   width: 200px;
-  font-family: 1451;
+  font-family: '1451';
   text-decoration: none !important;
   color: rgb(232, 232, 232);
   font-size: 25px;
@@ -391,7 +392,7 @@ input[type="reset"] {
   padding-top: 6px;
   height: 45px;
   width: 200px;
-  font-family: 1451;
+  font-family: '1451';
   text-decoration: none !important;
   color: rgb(232, 232, 232);
   font-size: 25px;
@@ -411,6 +412,120 @@ input[type="reset"] {
     transition: 0.3s;
     color: rgb(255, 255, 255);
 }
+
+#gglogo {
+  top: 0px;
+  position: absolute;
+  right: 60px;
+  font-family: SCBI;
+  text-decoration: none !important;
+  color: rgb(232, 232, 232);
+  margin-top: -7px;
+  font-size: 55px;
+}
+#gglogo:hover {
+    
+  color: rgb(255, 255, 255);
+  transition: 0.2s;
+}
+
+
+#mpm {
+  position: absolute;
+  top: 0px;
+  
+  right: 730px;
+  padding-top: 6px;
+  height: 45px;
+  width: 200px;
+  font-family: '1451';
+  text-decoration: none !important;
+  color: rgb(232, 232, 232);
+  font-size: 25px;
+  text-align: center;
+  align-content: center;
+  background: linear-gradient(
+      to top,
+      rgb(255, 70, 85, 1) 2px,
+      transparent 2px
+    )
+    0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+}
+#mpm:hover {
+    background-size: 100% 2px;
+    transition: 0.3s;
+    color: rgb(255, 255, 255);
+}
+
+
+
+#hm {
+  position: absolute;
+  right: 945px;
+  top: 0px;
+  padding-top: 6px;
+  height: 45px;
+  width: 200px;
+  font-family: '1451';
+  text-decoration: none !important;
+  color: rgb(232, 232, 232);
+  font-size: 25px;
+  text-align: center;
+  align-content: center;
+  background: linear-gradient(
+      to top,
+      rgb(255, 70, 85, 1) 2px,
+      transparent 2px
+    )
+    0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+}
+#hm:hover {
+    background-size: 100% 2px;
+    transition: 0.3s;
+    color: rgb(255, 255, 255);
+}
+
+
+#mp {
+  position: absolute;
+  right: 515px;
+  top: 0px;
+  padding-top: 6px;
+  height: 45px;
+  width: 200px;
+  font-family: '1451';
+  text-decoration: none !important;
+  color: rgb(232, 232, 232);
+  font-size: 25px;
+  text-align: center;
+  align-content: center;
+  background: linear-gradient(
+      to top,
+      rgb(255, 70, 85, 1) 2px,
+      transparent 2px
+    )
+    0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+}
+#mp:hover {
+    background-size: 100% 2px;
+    transition: 0.3s;
+    color: rgb(255, 255, 255);
+}
+#topbar {
+  height: 60px;
+  width: 100%;
+  background-color: #070c11;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
 
 #minimap {
   overflow: clip; pointer-events: none;

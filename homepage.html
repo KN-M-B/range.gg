@@ -1,57 +1,72 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="with=device-width, initial-scale1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Valorant Website</title>
+    <title>Home | range.gg</title>
     <link href="style/style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
   </head>
   <body>
-      <div class="container">
-        <nav>
-          <div class="logo">
-            <img src="images/LOGO.png">
-          </div>
-              <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">MAPS</a></li>
-                <li><a href="#">AGENTS</a></li>
-                <li><a href="#">WEAPONS</a></li>
-                <li><a href="#">ESPORTS</a></li>
-              </ul>
-          <div class="btn">
-            <a href="#">Download</a>
-          </div>
-        </nav>
-          <div class="tag_line">
-              <div class="garena_logo">
-                <img src="images/riot.png">
-              </div>
-              <h2>The Best Game</h2>
-              <h1>Valorant</h1>
-          </div>
+    <div class="container">
+      <nav id="header"></nav>
+      <div class="tag_line">
+        <div id="tagtext">
+          <h1>RANGE.GG</h1>
+          <h2>VALORANT INSIGHTS</h2>
+        </div>
       </div>
+    </div>
 
-      <section class="about">
-        <h1 class="tag">ABOUT</h1>
-        <div class="main">
-          <img src="images/agent.png">
-          <div class="about_text">
-            <h1>
-              Valorant
-            </h1>
-            <p>
-              It is a free-to-play first-person tactical hero shooter developed and published by Riot Games, for Windows. Teased under the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020, followed by a release on June 2, 2020.
-              It  is a team-based first-person tactical hero shooter set in the near future. Players play as one of a set of Agents, characters based on several countries and cultures around the world.
-              In the main game mode, players are assigned to either the attacking or defending team with each team having five players on it. Agents have unique abilities, each requiring charges, as well as a unique ultimate ability that requires charging through kills, deaths, orbs, or objectives.
-              Every player starts each round with a "classic" pistol and one or more "signature ability" charges. Other weapons and ability charges can be purchased using an in-game economic system that awards money based on the outcome of the previous round, any kills the player is responsible for, and any objectives completed.
-            </p>
-            <button>GO TO</button>
-            </div>
-          </div>
-      </section>
+    <section id="agntmapwep"></section>
+
+    <section class="about">
+      <h1 class="tag">ABOUT</h1>
+      <div class="main">
+        <img id="jett" src="images/agent.png" />
+        <div class="about_text">
+          <h1>RANGE.GG</h1>
+          <p>
+            RANGE.GG is a community-driven site that aims to be a resource for
+            fellow Valorant fans containing information about the game's Agents,
+            Maps and Weapons.
+          </p>
+          <h1>VALORANT</h1>
+          <p>
+            A 5v5 character-based tactical FPS where precise gunplay meets
+            unique agent abilities.<br /><br />
+            Valorant is a free-to-play first-person tactical hero shooter
+            developed and published by Riot Games, for Windows. Teased under the
+            codename Project A in October 2019, the game began a closed beta
+            period with limited access on April 7, 2020, followed by a release
+            on June 2, 2020.
+          </p>
+        </div>
+        <a
+          href="https://playvalorant.com/"
+          id="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div id="btnfill"><h2>VISIT VALORANT OFFICIAL</h2></div>
+        </a>
+      </div>
+    </section>
+    <div id="footer"></div>
   </body>
-  </html>
+</html>
+
+<script>
+
+  $("#header ").load("header.html #topbar");
+
+  $("#footer ").load("endpage.html .endpage");
+
+  $("#agntmapwep").load("agt-map-wpn_sections.html");
+  
+
+
+</script>
