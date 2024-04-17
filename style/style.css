@@ -114,7 +114,7 @@
 #tagtext {
   position: absolute;
   transform: translate(0%,-50%);
-  left: 10%;
+  left: 25%;
   top: 40%;
 }
 
@@ -149,6 +149,11 @@
   cursor: pointer;
   margin-left: 200px;
 }
+
+
+
+
+
 
 .about .main .about_text {
   width: 700px;
@@ -397,4 +402,14 @@
   position: relative;
   top: 0px;
   left: 0px;
+}
+
+
+#valbox {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 57%;
+  left: -175px;
 }
