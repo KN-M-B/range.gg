@@ -1,0 +1,467 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+  }
+  
+  @font-face {
+    font-family: "SCBI";
+    src: url("/assets/fonts/ScoutCond-BoldItalic.otf") format("opentype");
+    font-weight: Bold;
+    font-style: Italic;
+  }
+  
+  @font-face {
+    font-family: "SCB";
+    src: url("/assets/fonts/ScoutCond-Bold.otf") format("opentype");
+    font-weight: Bold;
+  }
+  
+  @font-face {
+    font-family: "SCR";
+    src: url("/assets/fonts/ScoutCond-Regular.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "SCLI";
+    src: url("/assets/fonts/ScoutCond-LightItalic.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "SCRI";
+    src: url("/assets/fonts/ScoutCond-RegularItalic.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "1451";
+    src: url("/assets/fonts/DIN\ 1451\ Std\ Mittelschrift.otf") format("opentype");
+  }
+  
+  #topbar {
+    height: 60px;
+    width: 100%;
+    background-color: #070c11;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #head {
+    height: 300px;
+    width: 100%;
+    background-color: rgb(255, 70, 85);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+  }
+  
+  #body {
+    height: 650px;
+    width: 100%;
+    background-color: rgb(15, 25, 35);
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #mapname {
+    height: 200px;
+    width: 70%;
+    left: 50px;
+    top: 0px;
+    position: absolute;
+    align-content: center;
+    font-family: SCBI;
+    color: white;
+    font-size: 200px;
+    text-indent: 100px;
+  }
+  
+  #location {
+    height: 75px;
+    width: 70%;
+    left: 50px;
+    top: 170px;
+    position: absolute;
+    align-content: center;
+    font-family: SCRI;
+    color: white;
+    font-size: 70px;
+    text-indent: 85px;
+  }
+  
+  #coordinates {
+    height: 30px;
+    width: 70%;
+    left: 50px;
+    top: 240px;
+    position: absolute;
+    align-content: center;
+    font-family: SCLI;
+    color: white;
+    font-size: 30px;
+    text-indent: 75px;
+  }
+  
+  #mapcover {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 300px;
+    width: 533px;
+    background-color: bisque;
+  }
+  
+  #headgradient {
+    background: linear-gradient(
+      to left,
+      #ff000000,
+      rgba(255, 70, 85, 1),
+      rgba(255, 70, 85, 1),
+      rgba(255, 70, 85, 1),
+      rgba(255, 70, 85, 1)
+    );
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  
+  #gallerycontainer {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 550px;
+    width: 1050px;
+    top: 50px;
+    left: 50px;
+  }
+  
+  #layoutcontainer {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 550px;
+    width: 650px;
+    top: 50px;
+    right: 50px;
+  }
+  #vertdiv {
+    position: absolute;
+    background-color: rgb(236, 232, 225, 0.3333);
+    height: 575px;
+    width: 2px;
+    top: 37.5px;
+    right: 745px;
+  }
+  
+  .MapLayout {
+    
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .Border {
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: inherit;
+    width: inherit;
+    z-index: 10;
+  
+    background: linear-gradient(
+          to right,
+          rgb(236, 232, 225, 0.66) 2px,
+          transparent 2px
+        )
+        0 100%,
+      linear-gradient(to left, rgb(236, 232, 225, 0.66) 2px, transparent 2px) 100%
+        0,
+      linear-gradient(to bottom, rgb(236, 232, 225, 0.66) 2px, transparent 2px)
+        100% 0,
+      linear-gradient(to top, rgb(236, 232, 225, 0.66) 2px, transparent 2px) 0
+        100%;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+  }
+  
+  #layoutborder {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: inherit;
+    width: 650px;
+  
+    background: linear-gradient(
+          to right,
+          rgb(236, 232, 225, 0.66) 2px,
+          transparent 2px
+        )
+        0 100%,
+      linear-gradient(to left, rgb(236, 232, 225, 0.66) 2px, transparent 2px) 100%
+        0,
+      linear-gradient(to bottom, rgb(236, 232, 225, 0.66) 2px, transparent 2px)
+        100% 0,
+      linear-gradient(to top, rgb(236, 232, 225, 0.66) 2px, transparent 2px) 0
+        100%;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+  }
+  
+  #gallery {
+    cursor: ew-resize;
+    position: absolute;
+    margin-top: 8px;
+    height: 516px;
+    width: 1018px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 55px repeat(5, 888.888px) 55px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    overflow: hidden;
+    scroll-snap-type: both mandatory;
+    scroll-padding: 1rem;
+    scroll-behavior: smooth;
+    li {
+      scroll-snap-align: center;
+      display: inline-block;
+    }
+  }
+  
+  .active {
+    scroll-snap-type: unset;
+  }
+  
+  #galleryfade {
+    position: absolute;
+    pointer-events: none;
+    height: 550px;
+    width: 1050px;
+    background: linear-gradient(to right, #ffffff00 90%, #070c11),
+      linear-gradient(to left, #ffffff00 90%, #070c11);
+  }
+  
+  #logo {
+    top: 0px;
+    position: absolute;
+    right: 60px;
+    font-family: SCBI;
+    text-decoration: none !important;
+    color: rgb(232, 232, 232);
+    margin-top: -7px;
+    font-size: 55px;
+  }
+  #logo:hover {
+      
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+  }
+  
+  #dropdowncontainer {
+    height: 60px;
+    width: 600px;
+  }
+  
+  #dropdownlabel {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    height: 50px;
+    width: 180px;
+    color: rgb(236, 232, 225);
+    font-family: SCLI;
+    font-size: 36px;
+    text-align: center;
+    align-content: center;
+  }
+  
+  #dropdown {
+    text-indent: 30px;
+    position: absolute;
+    top: 5px;
+    left: 260px;
+    background-color: rgb(15, 25, 35);
+    height: 50px;
+    width: 250px;
+    color: rgb(236, 232, 225);
+    font-family: SCRI;
+    font-size: 40px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+  
+    border-radius: 12px;
+  }
+  
+  #dropdown:hover {
+    color: rgba(255, 70, 85, 1);
+    transition: 0.1s;
+  
+    border-radius: 12px 12px 0px 0px;
+  }
+  
+  button,
+  input[type="submit"],
+  input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+  
+  .dropdown-content {
+    display: inline-block;
+    position: absolute;
+    top: -1000px;
+    left: 260px;
+    background-color: rgb(15, 25, 35);
+    height: 505px;
+    width: 250px;
+    z-index: 10;
+    color: rgb(236, 232, 225);
+    font-family: SCRI;
+    font-size: 40px;
+    border-radius: 0px 0px 12px 12px;
+    button {
+      color: rgb(236, 232, 225);
+      margin-left: 5px;
+      text-indent: 30px;
+      height: 50px;
+      width: 240px;
+      text-align: left;
+      border-radius: 12px;
+      background-color: rgb(15, 25, 35);
+    }
+    button:hover {
+      color: rgb(255, 255, 255);
+      transition: 0.2s;
+      background-color: #1d2b38;
+    }
+  }
+  
+  .dropdown-content:hover {
+    top: 55px;
+    left: 260px;
+  }
+  
+  #dropdown:hover + .dropdown-content {
+    top: 55px;
+    left: 260px;
+  }
+  
+  #agnt {
+    position: absolute;
+    right: 300px;
+    top: 0px;
+    padding-top: 6px;
+    height: 45px;
+    width: 200px;
+    font-family: 1451;
+    text-decoration: none !important;
+    color: rgb(232, 232, 232);
+    font-size: 25px;
+    text-align: center;
+    align-content: center;
+    background: linear-gradient(
+        to top,
+        rgb(255, 70, 85, 1) 2px,
+        transparent 2px
+      )
+      0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+  }
+  #agnt:hover {
+      background-size: 100% 2px;
+      transition: 0.3s;
+      color: rgb(255, 255, 255);
+  }
+  #wpn {
+    position: absolute;
+    right: 515px;
+    top: 0px;
+    padding-top: 6px;
+    height: 45px;
+    width: 200px;
+    font-family: 1451;
+    text-decoration: none !important;
+    color: rgb(232, 232, 232);
+    font-size: 25px;
+    text-align: center;
+    align-content: center;
+    background: linear-gradient(
+        to top,
+        rgb(255, 70, 85, 1) 2px,
+        transparent 2px
+      )
+      0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+  }
+  #wpn:hover {
+      background-size: 100% 2px;
+      transition: 0.3s;
+      color: rgb(255, 255, 255);
+  }
+.agent.card {
+    background-color: #2b2b2b;
+    color: rgb(246, 246, 246);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    margin: 0 20px 20px 0;
+    position: relative;
+}
+.agent-image-container{
+    position: center;
+    top: -50px;
+    left: 0;
+    width: 200px;
+    height: 300px;
+    object-fit: fill;
+    overflow: -moz-hidden-unscrollable;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.agent-name{
+    margin: 0;
+    
+    align-items: center;
+    display: flex;
+  justify-content: center;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.agent-role{
+    margin: 0;
+    font-size: 0.9em;
+    color: #ffffff;
+    align-items: center;
+    display: flex;
+  justify-content: center;
+    background-color: #000000;
+}
+
+.agent-description{
+    margin: 0;
+    font-size: 0.9em;
+    color: #ffffff;
+    align-items: center;
+    display: flex;
+  justify-content: center;
+    background-color: #000000;
+}
