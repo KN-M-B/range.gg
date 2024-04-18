@@ -1,30 +1,19 @@
 @font-face {
   font-family: "SCBI";
-  src: url("/assets/fonts/ScoutCond-BoldItalic.otf") format("opentype");
+  src:url("../assets/fonts/ScoutCond-BoldItalic.otf") format("opentype");
   font-weight: Bold;
   font-style: Italic;
 }
 
 @font-face {
   font-family: "1451";
-  src: url("/assets/fonts/DIN\ 1451\ Std\ Mittelschrift.otf") format("opentype");
+  src:url("../assets/fonts/DIN\ 1451\ Std\ Mittelschrift.otf") format("opentype");
 }
 
 * {
   margin: 0;
   padding: 0;
   font-family: "1451", sans-serif;
-}
-
-.endpage img {
-  width: 150px;
-  display: block;
-  margin: 0 30px;
-  align-items: center;
-  float: center;
-  padding-left: 800px;
-  padding-bottom: 30px;
-  padding-top: 35px;
 }
 
 .endpage {
@@ -89,7 +78,7 @@
 
 #logos {
   height: 150px;
-  width: 600px;
+  width: 750px;
   position: absolute;
   top: 30px;
   left: 50%;
@@ -103,6 +92,20 @@
 
 #valorant {
   position: absolute;
+  height: 97px !important;
+  width: 150px !important;
   top: 50%;
+  right: 70px;
   transform: translate(-50%, -50%);
+}
+
+#slash {
+  height: 100px;
+  width: 2px;
+  position: absolute;
+  background-color: rgb(236, 232, 225, 0.3333);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }

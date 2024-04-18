@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link href="style/map_style.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom/dist/panzoom.min.js"></script>
+    
   </head>
   <body>
     <main>
@@ -28,9 +29,11 @@
             <button onclick="Sunset()">SUNSET</button>
           </div>
         </div>
+        <a id="hm" href="index.html">HOME </a>
+        <a id="mpm" href="map_main.html">MAPS </a>
         <a id="agnt" href="agents.html">AGENTS </a>
         <a id="wpn" href="weapons_main.html">WEAPONS </a>
-        <a id="logo" href="homepage.html">RANGE.GG</a>
+        <a id="logo" href="index.html">RANGE.GG</a>
       </div>
 
       <div id="head">
@@ -53,35 +56,35 @@
             <li></li>
             <li
               style="
-                background: url(/assets/maps/Ascent_A_Site.webp);
+                background: url(./assets/maps/Ascent_A_Site.webp);
                 background-size: contain;
                 background-repeat: no-repeat;
               "
             ></li>
             <li
               style="
-                background: url(/assets/maps/Ascent_B_Site.webp);
+                background: url(./assets/maps/Ascent_B_Site.webp);
                 background-size: contain;
                 background-repeat: no-repeat;
               "
             ></li>
             <li
               style="
-                background: url(/assets/maps/Ascent_Attacker_Spawn.webp);
+                background: url(./assets/maps/Ascent_Attacker_Spawn.webp);
                 background-size: contain;
                 background-repeat: no-repeat;
               "
             ></li>
             <li
               style="
-                background: url(/assets/maps/Ascent_Defender_Spawn.webp);
+                background: url(./assets/maps/Ascent_Defender_Spawn.webp);
                 background-size: contain;
                 background-repeat: no-repeat;
               "
             ></li>
             <li
               style="
-                background: url(/assets/maps/Ascent_Courtyard.webp);
+                background: url(./assets/maps/Ascent_Courtyard.webp);
                 background-size: contain;
                 background-repeat: no-repeat;
               "
@@ -116,13 +119,14 @@
         <div id="vertdiv"></div>
       </section>
 
-      <div id="footer"></div>
+      
     </main>
+    <div id="footer"></div>
   </body>
 </html>
 
 <script>
-  $("#footer ").load("endpage.html");
+  $("#footer ").load("endpage.html .endpage");
 
   const element = document.getElementById("minimap");
   const panzoom = Panzoom(element, {
