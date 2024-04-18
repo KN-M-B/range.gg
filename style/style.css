@@ -229,6 +229,12 @@
   }
 }
 
+.about .main .about_text button:hover{
+  color: white;
+  background: #ffcc00;
+  border: 2px solid;
+  box-shadow: 0 0 16px #ffcc00;
+}
 
 #btnfill:hover {
   background-color: white;
@@ -336,7 +342,6 @@
     transition: 0.3s;
     color: rgb(255, 255, 255);
 }
-
 
 
 #hm {
