@@ -1,13 +1,13 @@
 @font-face {
   font-family: "SCBI";
-  src: url("/assets/fonts/ScoutCond-BoldItalic.otf") format("opentype");
+  src:url("../assets/fonts/ScoutCond-BoldItalic.otf") format("opentype");
   font-weight: Bold;
   font-style: Italic;
 }
 
 @font-face {
   font-family: "1451";
-  src: url("/assets/fonts/DIN\ 1451\ Std\ Mittelschrift.otf") format("opentype");
+  src:url("../assets/fonts/DIN\ 1451\ Std\ Mittelschrift.otf") format("opentype");
 }
 
 * {
